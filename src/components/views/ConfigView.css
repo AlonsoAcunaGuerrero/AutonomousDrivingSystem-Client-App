@@ -1,0 +1,45 @@
+.config-view-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    padding: 4em;
+}
+
+.config-panel {
+    display: flex;
+    background-color: rgb(127, 127, 255);
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    position: relative;
+    padding: 2em;
+}
+
+.btn-close-config {
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    border-radius: 1em;
+    background-color: rgb(100, 100, 255);
+    border-color: transparent;
+}
+
+.btn-close-config > svg {
+    font-size: 4em;
+    color: white;
+}
+
+.config-options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 4em;
+}
+
+.config-options > button {
+    font-size: 2em;
+    padding: 0.25em;
+}

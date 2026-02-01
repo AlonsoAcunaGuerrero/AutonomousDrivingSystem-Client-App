@@ -1,0 +1,50 @@
+.tool-bar {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  height: 5vw;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  z-index: 2;
+  top: 2.5%;
+}
+
+.btn-tool-normal,
+.btn-tool-selected {
+  display: flex;
+  flex-direction: row;
+  border-radius: 100%;
+  border-color: transparent;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(86, 86, 255);
+  height: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+
+.btn-tool-selected {
+  outline-offset: 2px;
+  outline-width: 0.5em;
+  outline-color: rgb(86, 86, 255);
+  outline-style: outset;
+}
+
+.btn-tool-normal:hover,
+.btn-tool-selected:hover {
+  cursor: pointer;
+}
+
+.btn-tool-normal > svg,
+.btn-tool-selected > svg {
+  font-size: 5vw;
+  padding: 0.25em;
+  color: white;
+}
+
+.btn-tool-normal > span,
+.btn-tool-selected > span {
+  font-size: 2em;
+}
