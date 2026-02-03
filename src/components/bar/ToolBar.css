@@ -4,11 +4,12 @@
   position: absolute;
   height: 5vw;
   width: 100%;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-  gap: 4em;
+  gap: 2em;
   z-index: 2;
   top: 2.5%;
+  right: 2.5%;
 }
 
 .btn-tool-normal,

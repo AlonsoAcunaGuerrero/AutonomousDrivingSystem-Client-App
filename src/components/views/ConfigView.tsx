@@ -1,4 +1,5 @@
 import { BiX } from "react-icons/bi";
+import { FaCarSide } from "react-icons/fa6";
 import { ViewMode } from "../../App";
 import "./ConfigView.css";
 
@@ -13,6 +14,7 @@ export default function ({ currentMode, changeMode } : { currentMode: ViewMode, 
     return(
         <div className="config-view-container">
             <div className="config-panel">
+                <h2>Configuration</h2>
                 <button className="btn-close-config" onClick={
                     () => hideConfigView()
                 }>
@@ -21,7 +23,13 @@ export default function ({ currentMode, changeMode } : { currentMode: ViewMode, 
                 
                 <div className="config-options">
                     <button>
-                        Connections
+                        <FaCarSide />
+                        <span>Connections</span>
+                    </button>
+
+                    <button>
+                        <FaCarSide />
+                        <span>Connections</span>
                     </button>
                 </div>
             </div>
