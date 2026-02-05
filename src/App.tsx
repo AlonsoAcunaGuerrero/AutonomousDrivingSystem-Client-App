@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import MapView from "./components/map/MapView";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import ToolBar from "./components/bar/ToolBar";
+import ActionsToolBar from "./components/bar/ActionsToolBar";
 import ConfigView from "./components/views/ConfigView";
+import DrivingToolBar from "./components/bar/DrivingToolBar";
 
 export enum ViewMode {
   None,
@@ -11,25 +11,30 @@ export enum ViewMode {
   Config
 }
 
+export enum DrivingMode {
+  Stop,
+  FreeDriving,
+  DrivingToDestination,
+}
+
 function App() {
-  const [currentMode, setCurrentMode] = useState<ViewMode>(ViewMode.None)
+  const [currentViewMode, setCurrentViewMode] = useState<ViewMode>(ViewMode.None)
+  const [currentDrivingMode, setCurrentDrivingMode] = useState<DrivingMode>(DrivingMode.Stop)
 
   return (
     <main>
-      <ToolBar currentMode={currentMode} changeMode={setCurrentMode} />
+      <ActionsToolBar currentMode={currentViewMode} changeMode={setCurrentViewMode} />
       
       <div className="main-panel">
-        {/* <div className="control-panel">
-          <button>Go</button>
-        </div> */}
-
-        <MapView currentMode={currentMode} />
+        <MapView currentMode={currentViewMode} />
       </div>
 
       {
-        currentMode == ViewMode.Config ?
-        <ConfigView currentMode={currentMode} changeMode={setCurrentMode}/> : null
+        currentViewMode == ViewMode.Config ?
+        <ConfigView currentMode={currentViewMode} changeMode={setCurrentViewMode}/> : null
       }
+
+      <DrivingToolBar currentMode={currentDrivingMode} changeMode={setCurrentDrivingMode} />
     </main>
   )
 }

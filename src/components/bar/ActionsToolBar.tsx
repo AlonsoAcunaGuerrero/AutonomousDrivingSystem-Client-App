@@ -6,7 +6,7 @@ import { ViewMode } from "../../App";
 export default function ({ currentMode, changeMode } : { currentMode: ViewMode, changeMode: (value: ViewMode) => void }) {
 
     return (
-        <div className="tool-bar">
+        <div className="actions-tool-bar">
             <button className={currentMode == ViewMode.Marker ? "btn-tool-selected" : "btn-tool-normal"} 
                 onClick={() => {
                     if (currentMode == ViewMode.Marker) {

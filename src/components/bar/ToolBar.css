@@ -1,7 +1,11 @@
-.tool-bar {
+.actions-tool-bar,
+.driving-tool-bar {
   display: flex;
   flex-direction: row;
   position: absolute;
+}
+
+.actions-tool-bar {
   height: 5vw;
   width: 100%;
   justify-content: end;
@@ -48,4 +52,65 @@
 .btn-tool-normal > span,
 .btn-tool-selected > span {
   font-size: 2em;
+}
+
+
+.driving-tool-bar {
+  height: 7.5vw;
+  width: 100%;
+  bottom: 0%;
+  inset-inline: calc(var(--spacing) * 0);
+  padding-bottom: 1em;
+  z-index: 2;
+  justify-content: center;
+}
+
+.driving-tool-bar-container{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  gap: 2em;
+  padding: 1em;
+  background-color: white;
+  border-radius: 0.75em;
+}
+
+.driving-tool-bar-container > button {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5em;
+  border-color: transparent;
+  padding: 0 2em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.driving-tool-bar-container > button > span {
+  width: 100%;
+  text-align: center;
+  font-size: 1.75em;
+  color: white;
+}
+
+.driving-tool-bar-container > button > svg {
+  font-size: 5em;
+  color: white;
+}
+
+.driving-tool-bar-container > button:hover {
+  cursor: pointer;
+}
+
+.btn-driving {
+  background-color: rgb(86, 86, 255);
+}
+
+.btn-stop {
+  background-color: rgb(255, 86, 86);
+}
+
+.btn-stop:disabled {
+  background-color: rgb(207, 70, 70);
 }
