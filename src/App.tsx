@@ -1,21 +1,11 @@
-import { useState } from "react";
 import "./App.css";
-import MapView from "./components/map/MapView";
+import { useState } from "react";
+import MapView from "./views/MapView";
 import ActionsToolBar from "./components/bar/ActionsToolBar";
-import ConfigView from "./components/views/ConfigView";
+import ConfigView from "./views/ConfigView";
 import DrivingToolBar from "./components/bar/DrivingToolBar";
+import { DrivingMode, ViewMode } from "./types";
 
-export enum ViewMode {
-  None,
-  Marker,
-  Config
-}
-
-export enum DrivingMode {
-  Stop,
-  FreeDriving,
-  DrivingToDestination,
-}
 
 function App() {
   const [currentViewMode, setCurrentViewMode] = useState<ViewMode>(ViewMode.None)

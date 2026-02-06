@@ -1,7 +1,7 @@
 import type { LeafletEventHandlerFnMap } from 'leaflet';
 import { Marker, Popup, useMapEvents } from "react-leaflet";
 import { useState } from "react";
-import { ViewMode } from '../../App';
+import { ViewMode } from '../types';
 
 
 interface MarkerPosition {

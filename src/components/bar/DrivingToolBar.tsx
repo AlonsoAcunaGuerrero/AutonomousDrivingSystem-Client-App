@@ -1,7 +1,8 @@
 import "./ToolBar.css";
-import { DrivingMode } from "../../App";
 import { GiHummingbird } from "react-icons/gi";
 import { IoCarSport } from "react-icons/io5";
+import { BsFillSignStopFill } from "react-icons/bs";
+import { DrivingMode } from "../../types";
 
 
 export default function ({ currentMode, changeMode } : { currentMode: DrivingMode, changeMode: (value: DrivingMode) => void }) {
@@ -22,6 +23,7 @@ export default function ({ currentMode, changeMode } : { currentMode: DrivingMod
 
                 <button className="btn-stop"
                     disabled={currentMode == DrivingMode.Stop}>
+                    <BsFillSignStopFill />
                     <span>Stop</span>
                 </button>
             </div>

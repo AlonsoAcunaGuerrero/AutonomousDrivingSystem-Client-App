@@ -1,6 +1,6 @@
 import { BiX } from "react-icons/bi";
-import { FaCarSide } from "react-icons/fa6";
-import { ViewMode } from "../../App";
+import { FaCarSide, FaMapLocation } from "react-icons/fa6";
+import { ViewMode } from "../types";
 import "./ConfigView.css";
 
 export default function ({ currentMode, changeMode } : { currentMode: ViewMode, changeMode: (value: ViewMode) => void }) {
@@ -28,8 +28,8 @@ export default function ({ currentMode, changeMode } : { currentMode: ViewMode, 
                     </button>
 
                     <button>
-                        <FaCarSide />
-                        <span>Connections</span>
+                        <FaMapLocation />
+                        <span>Download Other Map</span>
                     </button>
                 </div>
             </div>

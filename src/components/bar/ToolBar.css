@@ -37,11 +37,6 @@
   outline-style: outset;
 }
 
-.btn-tool-normal:hover,
-.btn-tool-selected:hover {
-  cursor: pointer;
-}
-
 .btn-tool-normal > svg,
 .btn-tool-selected > svg {
   font-size: 5vw;
@@ -56,7 +51,7 @@
 
 
 .driving-tool-bar {
-  height: 7.5vw;
+  height: 15vh;
   width: 100%;
   bottom: 0%;
   inset-inline: calc(var(--spacing) * 0);
@@ -97,10 +92,6 @@
 .driving-tool-bar-container > button > svg {
   font-size: 5em;
   color: white;
-}
-
-.driving-tool-bar-container > button:hover {
-  cursor: pointer;
 }
 
 .btn-driving {

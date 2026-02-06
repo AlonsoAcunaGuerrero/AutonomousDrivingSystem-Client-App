@@ -1,7 +1,7 @@
 import "./ToolBar.css";
 import { FaMapMarker, FaMapMarkerAlt } from "react-icons/fa";
 import { BsGear, BsGearFill } from "react-icons/bs";
-import { ViewMode } from "../../App";
+import { ViewMode } from "../../types";
 
 export default function ({ currentMode, changeMode } : { currentMode: ViewMode, changeMode: (value: ViewMode) => void }) {
 
