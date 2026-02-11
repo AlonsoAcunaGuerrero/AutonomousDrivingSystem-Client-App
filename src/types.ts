@@ -3,6 +3,12 @@ export interface Vector2D {
     y: number
 }
 
+export interface MdnsDevice {
+  name: string
+  addr: string
+  port: number
+}
+
 export enum ViewMode {
   None,
   Marker,
