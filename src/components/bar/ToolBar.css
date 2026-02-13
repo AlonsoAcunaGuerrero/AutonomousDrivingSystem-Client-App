@@ -2,25 +2,22 @@
 .driving-tool-bar {
   display: flex;
   flex-direction: row;
-  position: absolute;
+  background-color: white;
 }
 
 .actions-tool-bar {
-  height: 5vw;
   width: 100%;
   justify-content: end;
   align-items: center;
   gap: 2em;
-  z-index: 2;
-  top: 2.5%;
-  right: 2.5%;
+  padding: 0.75em;
 }
 
 .btn-tool-normal,
 .btn-tool-selected {
   display: flex;
   flex-direction: row;
-  border-radius: 100%;
+  border-radius: 0.5em;
   border-color: transparent;
   justify-content: center;
   align-items: center;
@@ -39,7 +36,7 @@
 
 .btn-tool-normal > svg,
 .btn-tool-selected > svg {
-  font-size: 5vw;
+  font-size: 4em;
   padding: 0.25em;
   color: white;
 }
@@ -51,46 +48,35 @@
 
 
 .driving-tool-bar {
-  height: 15vh;
-  width: 100%;
-  bottom: 0%;
-  inset-inline: calc(var(--spacing) * 0);
-  padding-bottom: 1em;
-  z-index: 2;
-  justify-content: center;
-}
-
-.driving-tool-bar-container{
   display: flex;
-  flex-direction: row;
-  width: 80%;
-  gap: 2em;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
   padding: 1em;
-  background-color: white;
-  border-radius: 0.75em;
+  gap: 2em;
 }
 
-.driving-tool-bar-container > button {
+.driving-tool-bar > button {
   display: flex;
   flex-direction: row;
   height: 100%;
   width: 100%;
   border-radius: 0.5em;
   border-color: transparent;
-  padding: 0 2em;
+  padding: 0.5em 1.5em;
   justify-content: space-between;
   align-items: center;
 }
 
-.driving-tool-bar-container > button > span {
+.driving-tool-bar > button > span {
   width: 100%;
   text-align: center;
-  font-size: 1.75em;
+  font-size: 2em;
   color: white;
 }
 
-.driving-tool-bar-container > button > svg {
-  font-size: 5em;
+.driving-tool-bar > button > svg {
+  font-size: 4em;
   color: white;
 }
 
@@ -104,4 +90,16 @@
 
 .btn-stop:disabled {
   background-color: rgb(207, 70, 70);
+}
+
+.btn-stop:disabled > svg,
+.btn-stop:disabled > span {
+  color: rgb(206, 206, 206);
+}
+
+
+@media (min-width: 768px) {
+  .driving-tool-bar {
+    flex-direction: row;
+  }
 }

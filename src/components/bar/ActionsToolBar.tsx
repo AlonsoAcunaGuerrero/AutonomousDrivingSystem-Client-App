@@ -7,7 +7,7 @@ export default function ({ currentMode, changeMode } : { currentMode: ViewMode, 
 
     return (
         <div className="actions-tool-bar">
-            <button className={currentMode == ViewMode.Marker ? "btn-tool-selected" : "btn-tool-normal"} 
+{/*             <button className={currentMode == ViewMode.Marker ? "btn-tool-selected" : "btn-tool-normal"} 
                 onClick={() => {
                     if (currentMode == ViewMode.Marker) {
                         changeMode(ViewMode.None)
@@ -21,8 +21,7 @@ export default function ({ currentMode, changeMode } : { currentMode: ViewMode, 
                     <FaMapMarkerAlt />
                     : <FaMapMarker />
                 }
-                {/*<span>Add Marker</span>*/}
-            </button>
+            </button> */}
 
             <button className={currentMode == ViewMode.Config ? "btn-tool-selected" : "btn-tool-normal"}
                 onClick={() => {

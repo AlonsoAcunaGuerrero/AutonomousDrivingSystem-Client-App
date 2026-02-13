@@ -8,25 +8,17 @@ import { DrivingMode } from "../../types";
 export default function ({ currentMode, changeMode } : { currentMode: DrivingMode, changeMode: (value: DrivingMode) => void }) {
     return(
         <div className="driving-tool-bar">
-            <div className="driving-tool-bar-container">
-                <button className="btn-driving"
-                    disabled={currentMode != DrivingMode.Stop}>
-                    <GiHummingbird />
-                    <span>Free Driving</span>
-                </button>
+            <button className="btn-driving"
+                disabled={currentMode != DrivingMode.Stop}>
+                <GiHummingbird />
+                <span>Free Driving</span>
+            </button>
 
-                <button className="btn-driving"
-                    disabled={currentMode != DrivingMode.Stop}>
-                    <IoCarSport />
-                    <span>Driving To Destination</span>
-                </button>
-
-                <button className="btn-stop"
-                    disabled={currentMode == DrivingMode.Stop}>
-                    <BsFillSignStopFill />
-                    <span>Stop</span>
-                </button>
-            </div>
+            <button className="btn-stop"
+                disabled={currentMode == DrivingMode.Stop}>
+                <BsFillSignStopFill />
+                <span>Stop</span>
+            </button>
         </div>
     )
 }
